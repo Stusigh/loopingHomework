@@ -38,5 +38,6 @@ public class ExerciseOne {
         System.out.println(productOfNumbers);
         System.out.println(smallestNumber);
         System.out.println(largestNumber);
+        userInput.close();
     }
 }

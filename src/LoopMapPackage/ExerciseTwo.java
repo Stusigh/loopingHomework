@@ -24,7 +24,7 @@ public class ExerciseTwo {
         if(!(cars.containsKey(carDesired))) {
             System.out.println("I think you should leave. We don't serve your sort around here. Please use capitals or don't drive at all.");
         } else {
-            System.out.println("Well of course we have the " + carDesired + "!" + "That's made by the fine people at " + cars.get(carDesired)+ "!");
+            System.out.println("Well of course we have the " + carDesired + "! " + "That's made by the fine people at " + cars.get(carDesired)+ "!");
         }
 
 

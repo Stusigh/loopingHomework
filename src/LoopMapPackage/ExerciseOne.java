@@ -34,7 +34,7 @@ public class ExerciseOne {
                 }
             }
         }
-        System.out.println("You entered" + userInputNumbers);               //print out results to console.
+        System.out.println("You entered: " + userInputNumbers);               //print out results to console.
         System.out.println("The sum of these numbers is " + sumOfNumbers);
         System.out.println("The product of these numbers is " + productOfNumbers);
         System.out.println("The smallest of these numbers is " + smallestNumber);

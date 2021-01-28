@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class ExerciseOne {
     public static void inputFiveNumberLoop() {
+        System.out.println("Exercise One: Please enter five numbers below: ");
         ArrayList<Integer> userInputNumbers = new ArrayList<>(5);
         Scanner userInput = new Scanner(System.in);
 
@@ -33,11 +34,11 @@ public class ExerciseOne {
                 }
             }
         }
-        System.out.println(userInputNumbers);               //print out results to console.
-        System.out.println(sumOfNumbers);
-        System.out.println(productOfNumbers);
-        System.out.println(smallestNumber);
-        System.out.println(largestNumber);
+        System.out.println("You entered" + userInputNumbers);               //print out results to console.
+        System.out.println("The sum of these numbers is " + sumOfNumbers);
+        System.out.println("The product of these numbers is " + productOfNumbers);
+        System.out.println("The smallest of these numbers is " + smallestNumber);
+        System.out.println("The largest of these numbers is " + largestNumber);
         userInput.close();
     }
 }

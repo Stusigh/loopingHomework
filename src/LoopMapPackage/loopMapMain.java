@@ -15,9 +15,8 @@ public class loopMapMain {
             System.out.println("Please Enter 1 or 2 next time.");
             userInput.close();
         }
-
-
-
+        userInput.close();
+        System.exit(0);
     }
 }
 

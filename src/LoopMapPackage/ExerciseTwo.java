@@ -1,6 +1,8 @@
 package LoopMapPackage;
 
 import java.util.HashMap;
+import java.util.Locale;
+import java.util.Map;
 import java.util.Scanner;
 
 public class ExerciseTwo {
@@ -22,10 +24,32 @@ public class ExerciseTwo {
         System.out.println("What model of car are you looking for, sir or madam?"); //ask for input
         String carDesired = userInput.next();
         if(!(cars.containsKey(carDesired))) {
-            System.out.println("I think you should leave. We don't serve your sort around here. Please use capitals or don't drive at all.");
+            System.out.println("Let me get the manager, he understands capital letters.");
         } else {
             System.out.println("Well of course we have the " + carDesired + "! " + "That's made by the fine people at " + cars.get(carDesired)+ "!");
         }
-        userInput.close();
+
+
+        //Using Map.Entry instead:
+
+        Scanner secondUserInput = new Scanner(System.in);
+        System.out.println("I'm the manager: case doesn't matter to me. What are you looking for?"); //ask for input
+        String secondCarDesired = secondUserInput.next().toLowerCase();
+        boolean carInStock = false;
+
+        for(Map.Entry<String, String> car: cars.entrySet())
+        {
+            if(secondCarDesired.equalsIgnoreCase(car.getKey())) {
+                System.out.println("Well of course we have the " + car.getKey() + "! " + "That's made by the fine people at " + car.getValue() + "!");
+                carInStock = true;
+            }
+        }
+        if(!(carInStock)) {
+            System.out.println("I can say with 100% certainty that we don't have that in stock. Please leave."); //ask for input
+        }
+        secondUserInput.close();
+
+
+
     }
 }
